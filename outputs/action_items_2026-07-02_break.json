@@ -1,0 +1,43 @@
+{
+  "meeting_id": 6,
+  "meeting_title": "break",
+  "date": "2026-07-02T16:30:00",
+  "summary": "Meeting: Q3 Roadmap Planning Date: June 20, 2026 Attendees: Priya Nair, Arjun Sharma, Sanjay Pillai, Divya Krishnan",
+  "decisions": [
+    "- The AI feature rollout was delayed due to API integration issues. Decided to prioritize this in Q3.",
+    "- Divya presented the new UX wireframes. The team agreed to proceed with the dark mode redesign.",
+    "- Agreed to start AI feature development in Week 1 of Q3 with Arjun's team.",
+    "- Weekly syncs confirmed every Tuesday at 10 AM IST."
+  ],
+  "action_items": [
+    {
+      "description": "- Rahul flagged that the staging environment needs to be set up before development begins.",
+      "owner": "Team",
+      "deadline": "TBD",
+      "priority": "medium"
+    },
+    {
+      "description": "- Divya Krishnan needs to complete UX wireframes by July 5.",
+      "owner": "July",
+      "deadline": "TBD",
+      "priority": "medium"
+    },
+    {
+      "description": "- Rahul Menon should configure staging server by June 25.",
+      "owner": "June",
+      "deadline": "TBD",
+      "priority": "medium"
+    }
+  ],
+  "key_topics": [
+    "Meeting",
+    "Roadmap",
+    "Planning",
+    "Date",
+    "June",
+    "Attendees",
+    "Priya",
+    "Nair"
+  ],
+  "mode": "rule-based"
+}

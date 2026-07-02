@@ -1,0 +1,282 @@
+/* ── BookingPage — Uber style ───────────────────────────────── */
+.booking-page {}
+
+.booking-layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 1024px) { .booking-layout { grid-template-columns: 1fr; } }
+
+/* Step sections */
+.booking-form { display: flex; flex-direction: column; gap: 6px; }
+
+.step-section { display: flex; flex-direction: column; gap: 8px; }
+
+.step-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gray-400);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0 4px;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px; height: 22px;
+  background: var(--gray-700);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.step-card { display: flex; flex-direction: column; }
+
+/* Participant chips */
+.participant-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.participant-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--gray-800);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+  width: 100%;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+.participant-toggle:hover {
+  border-color: var(--border-hover);
+  background: var(--gray-700);
+}
+.participant-toggle.selected {
+  border-color: var(--green);
+  background: var(--green-muted);
+}
+
+.p-info { flex: 1; min-width: 0; }
+.p-name { font-size: 0.875rem; font-weight: 600; color: var(--white); }
+.p-role { font-size: 0.72rem; color: var(--text-muted); margin-top: 1px; }
+
+.p-check {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--black);
+  font-size: 0.65rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all var(--transition-fast);
+}
+.p-check.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Confirm card */
+.confirm-card {
+  border-color: rgba(6,193,103,0.2);
+  background: rgba(6,193,103,0.04);
+}
+
+/* Slot chosen */
+.slot-chosen {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background: var(--green-muted);
+  border: 1px solid var(--green-border);
+  border-radius: var(--radius-md);
+}
+.slot-chosen-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--green);
+}
+.slot-chosen-time {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+.btn-link {
+  background: none;
+  border: none;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  font-family: var(--font-sans);
+  width: fit-content;
+  transition: color var(--transition-fast);
+}
+.btn-link:hover { color: var(--white); }
+
+.hint-text {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── Time picker ─────────────────────────────────────────────── */
+.time-section {}
+
+.time-mode-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.time-mode-header label { margin-bottom: 0; }
+
+.time-mode-toggle {
+  display: flex;
+  gap: 2px;
+  background: var(--gray-800);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 3px;
+}
+.tmt-btn {
+  padding: 4px 14px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all var(--transition-fast);
+  letter-spacing: 0.02em;
+}
+.tmt-btn:hover { color: var(--text-primary); }
+.tmt-btn.active {
+  background: var(--white);
+  color: var(--black);
+}
+
+.time-auto-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 10px 12px;
+  background: var(--gray-800);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  line-height: 1.5;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.time-btn {
+  padding: 9px 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--gray-800);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all var(--transition-fast);
+  text-align: center;
+  white-space: nowrap;
+}
+.time-btn:hover {
+  border-color: var(--border-hover);
+  color: var(--white);
+  background: var(--gray-700);
+}
+.time-btn.selected {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--black);
+  font-weight: 700;
+}
+
+/* Grid panel */
+.booking-grid-panel {
+  position: sticky;
+  top: 76px;
+}
+
+/* ── Success screen ──────────────────────────────────────────── */
+.booking-success {
+  max-width: 520px;
+  margin: 48px auto;
+  text-align: center;
+}
+.success-check {
+  width: 64px; height: 64px;
+  background: var(--green);
+  color: var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 auto 20px;
+}
+.booking-success h2 { font-size: 1.75rem; margin-bottom: 8px; }
+.booking-success > p { margin-bottom: 24px; }
+
+.success-card { text-align: left; margin-top: 16px; }
+.success-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+
+.success-meta { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.meta-row { display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--text-secondary); }
+.meta-icon { font-size: 1rem; flex-shrink: 0; }
+
+.success-participants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.p-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 4px;
+  background: var(--gray-800);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+.success-actions {
+  display: flex;
+  gap: 10px;
+}

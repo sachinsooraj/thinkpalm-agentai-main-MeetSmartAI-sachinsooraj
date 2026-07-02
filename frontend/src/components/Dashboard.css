@@ -1,0 +1,102 @@
+/* ── Dashboard — Uber style ─────────────────────────────────── */
+.dashboard {}
+
+.dashboard-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Next meeting highlight */
+.next-meeting-card {
+  border-color: var(--green-border);
+  background: linear-gradient(135deg, rgba(6,193,103,0.06), rgba(0,0,0,0));
+}
+
+.next-meeting-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.next-meeting-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.next-meeting-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+.next-meeting-meta span { display: flex; align-items: center; gap: 5px; }
+
+.next-meeting-participants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.participant-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 4px;
+  background: var(--gray-800);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Team grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: var(--gray-800);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast);
+}
+.team-card:hover { border-color: var(--border-hover); }
+
+.team-info { min-width: 0; }
+.team-name { font-size: 0.875rem; font-weight: 600; color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.team-role { font-size: 0.72rem; color: var(--text-muted); margin-top: 1px; }
+
+/* Agents grid */
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.agent-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: var(--gray-800);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast);
+}
+.agent-chip:hover { border-color: var(--green-border); }
+
+.agent-icon { font-size: 1.4rem; flex-shrink: 0; }
+.agent-name { font-size: 0.875rem; font-weight: 600; color: var(--white); }
+.agent-desc { font-size: 0.72rem; color: var(--text-muted); margin-top: 1px; }

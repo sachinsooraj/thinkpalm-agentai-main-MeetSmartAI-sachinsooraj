@@ -1,0 +1,107 @@
+/* ── ActionItemTracker — Uber style ─────────────────────────── */
+.tracker-page {}
+
+.tracker-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Table */
+.tracker-table-wrap { overflow-x: auto; padding: 0; }
+
+.tracker-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.tracker-table thead tr {
+  background: var(--gray-800);
+}
+
+.tracker-table th {
+  padding: 11px 16px;
+  text-align: left;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.tracker-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.tracker-table tbody tr {
+  transition: background var(--transition-fast);
+}
+.tracker-table tbody tr:hover {
+  background: rgba(255,255,255,0.025);
+}
+
+.priority-row-high   td:first-child { border-left: 2px solid #f87171; }
+.priority-row-medium td:first-child { border-left: 2px solid #fbbf24; }
+.priority-row-low    td:first-child { border-left: 2px solid var(--green); }
+
+.td-num      { color: var(--text-muted); width: 36px; text-align: center; }
+.td-desc     { color: var(--text-primary); max-width: 280px; }
+.td-meeting  { color: var(--text-muted); font-size: 0.78rem; max-width: 180px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.td-owner    { white-space: nowrap; }
+.td-deadline { white-space: nowrap; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+
+/* Status select */
+.status-select {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  width: 120px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--gray-700);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+/* Filter tabs */
+.filter-tabs { display: flex; gap: 4px; flex-wrap: wrap; }
+.filter-tab {
+  padding: 7px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+}
+.filter-tab:hover { border-color: var(--border-hover); color: var(--text-primary); }
+.filter-tab.active { background: var(--white); border-color: var(--white); color: var(--black); }
+
+.loading-state {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 40px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  gap: 8px;
+}

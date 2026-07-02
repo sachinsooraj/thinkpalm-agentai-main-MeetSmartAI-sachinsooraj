@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//MeetSmart AI//ThinkPalm//EN
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+SUMMARY:Q3 Product Roadmap Review
+DTSTART:20260620T100000
+DTEND:20260620T110000
+DTSTAMP:20260702T083551Z
+UID:meetsmart-1-f7481426@thinkpalm.com
+SEQUENCE:0
+ATTENDEE;CN="Arjun Sharma";PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSVP
+ =TRUE:MAILTO:arjun.sharma@thinkpalm.com
+ATTENDEE;CN="Sanjay Pillai";PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RSV
+ P=TRUE:MAILTO:sanjay.pillai@thinkpalm.com
+ATTENDEE;CN="Divya Krishnan";PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;RS
+ VP=TRUE:MAILTO:divya.krishnan@thinkpalm.com
+DESCRIPTION:Quarterly review of product roadmap priorities and resource al
+ location.\n\nAgenda:\n1. Review Q2 deliverables\n2. Discuss Q3 priorities\
+ n3. Resource planning
+LOCATION:Conference Room B / Google Meet
+ORGANIZER;CN="Priya Nair";ROLE=CHAIR:MAILTO:priya.nair@thinkpalm.com
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

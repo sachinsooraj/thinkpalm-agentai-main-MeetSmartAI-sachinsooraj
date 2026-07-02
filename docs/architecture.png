@@ -1,0 +1,58 @@
+digraph "MeetSmart AI - Multi-Agent Architecture" {
+	graph [bgcolor="#050b18" fontcolor="#f1f5f9" fontname="sans-serif" fontsize=15 label="MeetSmart AI - Multi-Agent Architecture" nodesep=0.5 pad=0.5 rankdir=LR ranksep=0.8 splines=ortho]
+	node [fixedsize=true fontcolor="#f1f5f9" fontname="sans-serif" fontsize=11 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	b2a4a91112a641ce8b0f1e807e083446 [label="ThinkPalm
+Team" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/onprem/client/users.png" shape=none]
+	subgraph "cluster_Frontend (React + Vite)" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Frontend (React + Vite)" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		b03b7ee65cf64d049fe71a2a266ae555 [label="Booking UI
+Availability Grid
+Notes Upload
+Action Tracker" height=3.1 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/programming/framework/react.png" shape=none]
+	}
+	subgraph "cluster_Backend (FastAPI)" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Backend (FastAPI)" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"9a4bb778bfff4ba9899ff2d036f3e586" [label="REST API
+/api/*" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/programming/framework/fastapi.png" shape=none]
+		subgraph "cluster_AI Agents" {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label="AI Agents" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			"4c7d9bcf01114d5d95b170dd5671b7fd" [label="Availability
+Agent" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/generic/compute/rack.png" shape=none]
+			"052608f2a7e444698fd0c4101545e407" [label="Booking
+Agent" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/generic/compute/rack.png" shape=none]
+			"9ff32013cea249c9b29b4f23ce1e902a" [label="Invite
+Agent" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/generic/compute/rack.png" shape=none]
+			"4013957538a64996a8a90ca65c8e8e30" [label="Notes
+Agent" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/generic/compute/rack.png" shape=none]
+			d7e65e380e344a329521b8c55bca26ce [label="MoM
+Agent" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/generic/compute/rack.png" shape=none]
+			"29f6a11534a744ceba578f937a582305" [label="Reminder
+Agent" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/generic/compute/rack.png" shape=none]
+		}
+	}
+	a514af7e7e53445fbf8729e4d893227d [label="SQLite
+(Schedule Store)" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/onprem/database/postgresql.png" shape=none]
+	d4308930a843400691ba2f95c6ae0677 [label="/outputs/
+MoM .docx files" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/generic/storage/storage.png" shape=none]
+	bc56441b1ed34e38a52a20b514c0af82 [label="/samples/
+.ics files" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/generic/storage/storage.png" shape=none]
+	"256889a56d9a47d4b7d75a43fcf3e4fe" [label="SMTP
+(Email Delivery)" height=2.3 image="/home/thinkpalm/.local/lib/python3.10/site-packages/resources/generic/compute/rack.png" shape=none]
+	b2a4a91112a641ce8b0f1e807e083446 -> b03b7ee65cf64d049fe71a2a266ae555 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b03b7ee65cf64d049fe71a2a266ae555 -> "9a4bb778bfff4ba9899ff2d036f3e586" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9a4bb778bfff4ba9899ff2d036f3e586" -> "4c7d9bcf01114d5d95b170dd5671b7fd" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"4c7d9bcf01114d5d95b170dd5671b7fd" -> a514af7e7e53445fbf8729e4d893227d [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9a4bb778bfff4ba9899ff2d036f3e586" -> "052608f2a7e444698fd0c4101545e407" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"052608f2a7e444698fd0c4101545e407" -> a514af7e7e53445fbf8729e4d893227d [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9a4bb778bfff4ba9899ff2d036f3e586" -> "9ff32013cea249c9b29b4f23ce1e902a" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9ff32013cea249c9b29b4f23ce1e902a" -> bc56441b1ed34e38a52a20b514c0af82 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9a4bb778bfff4ba9899ff2d036f3e586" -> "4013957538a64996a8a90ca65c8e8e30" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"4013957538a64996a8a90ca65c8e8e30" -> a514af7e7e53445fbf8729e4d893227d [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9a4bb778bfff4ba9899ff2d036f3e586" -> d7e65e380e344a329521b8c55bca26ce [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	d7e65e380e344a329521b8c55bca26ce -> d4308930a843400691ba2f95c6ae0677 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9a4bb778bfff4ba9899ff2d036f3e586" -> "29f6a11534a744ceba578f937a582305" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9ff32013cea249c9b29b4f23ce1e902a" -> "256889a56d9a47d4b7d75a43fcf3e4fe" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	d7e65e380e344a329521b8c55bca26ce -> "256889a56d9a47d4b7d75a43fcf3e4fe" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"29f6a11534a744ceba578f937a582305" -> "256889a56d9a47d4b7d75a43fcf3e4fe" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}

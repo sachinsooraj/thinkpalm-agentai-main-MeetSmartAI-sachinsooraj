@@ -1,0 +1,58 @@
+{
+  "meeting_id": 1,
+  "meeting_title": "Q3 Product Roadmap Review",
+  "date": "2026-06-20T10:00:00",
+  "summary": "The team reviewed Q2 performance metrics showing 85% milestone completion. Q3 priorities were discussed and aligned around three key themes: AI feature rollout, platform scalability improvements, and UX redesign. Resource allocation was finalised with Arjun leading the backend work and Divya leading the design sprint.",
+  "decisions": [
+    "AI feature development will begin in Week 1 of Q3 with Arjun's team.",
+    "Design sprint for UX redesign scheduled for June 28 to July 5.",
+    "Rahul will set up the staging environment by June 25.",
+    "Weekly sync meetings every Tuesday at 10 AM IST confirmed."
+  ],
+  "action_items": [
+    {
+      "description": "Set up Q3 project board in Jira",
+      "owner": "Arjun Sharma",
+      "deadline": "2026-06-22",
+      "priority": "high",
+      "status": "pending"
+    },
+    {
+      "description": "Complete UX wireframes for new dashboard",
+      "owner": "Divya Krishnan",
+      "deadline": "2026-07-05",
+      "priority": "high",
+      "status": "pending"
+    },
+    {
+      "description": "Configure staging server environment",
+      "owner": "Rahul Menon",
+      "deadline": "2026-06-25",
+      "priority": "medium",
+      "status": "pending"
+    },
+    {
+      "description": "Draft Q3 OKRs document",
+      "owner": "Priya Nair",
+      "deadline": "2026-06-24",
+      "priority": "high",
+      "status": "pending"
+    },
+    {
+      "description": "Share Q2 retrospective notes with team",
+      "owner": "Sanjay Pillai",
+      "deadline": "2026-06-21",
+      "priority": "low",
+      "status": "pending"
+    }
+  ],
+  "key_topics": [
+    "Q3 Roadmap",
+    "AI Features",
+    "UX Redesign",
+    "Resource Planning",
+    "Staging Environment",
+    "OKRs"
+  ],
+  "mode": "gemini"
+}

@@ -1,0 +1,140 @@
+/* ── MeetingList — Uber style ────────────────────────────────── */
+.meetings-page {}
+
+/* Filter tabs */
+.filter-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+  letter-spacing: 0.02em;
+}
+.filter-tab:hover { border-color: var(--border-hover); color: var(--text-primary); }
+.filter-tab.active {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--black);
+}
+.tab-count {
+  background: rgba(255,255,255,0.15);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.68rem;
+}
+.filter-tab.active .tab-count { background: rgba(0,0,0,0.15); }
+
+/* Loading / empty */
+.loading-state {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 48px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 64px 24px;
+  gap: 8px;
+}
+
+/* Meeting list */
+.meeting-list { display: flex; flex-direction: column; gap: 8px; }
+
+.meeting-card {
+  cursor: default;
+  transition: border-color var(--transition-fast);
+}
+.meeting-card.expanded { border-color: var(--green-border); }
+
+.mc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 16px;
+}
+
+.mc-left { display: flex; align-items: flex-start; gap: 14px; flex: 1; }
+
+.mc-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  min-width: 48px;
+  padding: 8px 4px;
+  background: var(--gray-800);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.date-day { font-size: 1.3rem; font-weight: 800; color: var(--white); line-height: 1; letter-spacing: -0.02em; }
+.date-mon { font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; margin-top: 2px; letter-spacing: 0.06em; }
+
+.mc-info { flex: 1; }
+.mc-title { font-size: 1rem; font-weight: 600; margin-bottom: 5px; color: var(--text-primary); letter-spacing: -0.01em; }
+.mc-meta  { display: flex; flex-wrap: wrap; gap: 10px; font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 6px; }
+.mc-participants { display: flex; gap: 4px; }
+
+.mc-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.expand-icon { color: var(--text-muted); font-size: 0.7rem; }
+
+.mc-body {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.mc-section { margin-bottom: 18px; }
+
+.agenda-text {
+  background: var(--gray-800);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  white-space: pre-wrap;
+  border: 1px solid var(--border);
+}
+
+/* Action items in meetings */
+.action-list { display: flex; flex-direction: column; gap: 4px; }
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--gray-800);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--border);
+  font-size: 0.84rem;
+}
+.action-row.priority-high   { border-left-color: #f87171; }
+.action-row.priority-medium { border-left-color: #fbbf24; }
+.action-row.priority-low    { border-left-color: var(--green); }
+
+.priority-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.priority-dot.priority-high   { background: #f87171; }
+.priority-dot.priority-medium { background: #fbbf24; }
+.priority-dot.priority-low    { background: var(--green); }
+
+.action-desc  { flex: 1; color: var(--text-primary); }
+.action-owner { color: var(--text-muted); font-size: 0.75rem; white-space: nowrap; }
+
+.mc-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 4px; }

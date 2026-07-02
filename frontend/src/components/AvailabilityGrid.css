@@ -1,0 +1,100 @@
+/* ── AvailabilityGrid — Uber style ──────────────────────────── */
+.availability-grid {}
+
+.grid-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  min-height: 300px;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+.grid-empty-icon { font-size: 2.5rem; opacity: 0.3; }
+
+.grid-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.grid-legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.grid-legend span { display: flex; align-items: center; gap: 5px; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.legend-free     { background: var(--green); }
+.legend-selected { background: var(--white); }
+
+.date-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.date-group {}
+
+.date-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.slots-row { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.slot-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  border: 1px solid;
+  font-family: var(--font-sans);
+  transition: all var(--transition-fast);
+  min-width: 76px;
+}
+
+.slot-free {
+  background: var(--green-muted);
+  border-color: var(--green-border);
+  color: var(--green);
+}
+.slot-free:hover {
+  background: rgba(6,193,103,0.2);
+  border-color: var(--green);
+  transform: translateY(-1px);
+}
+
+.slot-selected {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--black);
+}
+
+.slot-time     { font-size: 0.82rem; font-weight: 700; }
+.slot-duration { font-size: 0.65rem; opacity: 0.7; }
+.slot-check    { font-size: 0.75rem; font-weight: 800; }
