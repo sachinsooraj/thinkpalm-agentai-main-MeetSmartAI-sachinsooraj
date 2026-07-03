@@ -44,7 +44,7 @@ FastAPI Backend (localhost:8000)
       │         └──▶ [3] Invite Agent (background task)
       │                    Generates RFC-5545 .ics file + sends HTML email
       │
-      ├──▶ [4] Notes Agent ──▶ Gemini 1.5 Flash / Rule-based parser
+      ├──▶ [4] Notes Agent ──▶ Claude Sonnet 4.6 / Rule-based parser
       │         Transcript → structured summary, decisions, action items
       │         └──▶ [5] MoM Agent
       │                    Generates Word .docx, emails to all participants
@@ -64,7 +64,7 @@ See [`docs/architecture.png`](docs/architecture.png) for the full diagram and [`
 | Frontend | React + Vite | 18 / 5.4 | Free / OSS |
 | Backend API | FastAPI | 0.111.0 | Free / OSS |
 | Database | SQLite (SQLAlchemy) | 2.0.30 | Free / OSS |
-| LLM | Google Gemini 1.5 Flash | 0.7.2 (free tier) | Free |
+| LLM | Claude Sonnet 4.6 | 0.7.2 (free tier) | Free |
 | Calendar Invites | `icalendar` | 5.0.13 | Free / OSS |
 | Word Documents | `python-docx` | 1.1.2 | Free / OSS |
 | Task Scheduling | APScheduler | 3.10.4 | Free / OSS |
