@@ -282,7 +282,7 @@ tests/test_notes_agent.py::TestRuleBasedNotes::test_deadline_extraction         
 
 ## 🎥 Demo Video
 
-> **Loom / YouTube link:** *(Add your 15-minute demo link here after recording)*
+> **Loom:** *https://www.loom.com/share/8c9b9d7863e5496ab24c3fba947f3931*
 >
 > Suggested demo flow (15 min):
 > 1. Dashboard tour (2 min)
